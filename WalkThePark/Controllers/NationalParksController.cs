@@ -19,7 +19,7 @@ namespace WalkThePark.Controllers
         }
 
         // GET api/nationalparks
-        [HttpGet]
+        [HttpGet ("pages")]
         public async Task<IActionResult> GetAll([FromQuery] UrlQuery urlQuery)
         {
             var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
@@ -53,9 +53,16 @@ namespace WalkThePark.Controllers
 
         // POST api/nationalparks
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] NationalPark nationalPark)
         {
-            Console.WriteLine(value);
+            _db.NationalParks.Add(nationalPark);
+            _db.SaveChanges();
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<NationalPark> GetAction(int id)
+        {
+            return _db.NationalParks.FirstOrDefault(entry => entry.NationalParkId == id);
         }
 
         // PUT api/nationalparks/5
