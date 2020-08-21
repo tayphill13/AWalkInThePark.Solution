@@ -24,11 +24,11 @@ namespace WalkThePark.Models
       builder.Entity<StatePark>()
       .HasData(
         new StatePark { StateParkId = 1, Name = "Bandon_State_Natural_Area", State = "Oregon", County = "Coos"},
-        new StatePark { StateParkId = 2, Name = "Cascadia_State_Park", State = "Oregon", County = "" },
-        new StatePark { StateParkId = 3, Name = "", State = "Washington", County = "" },
-        new StatePark { StateParkId = 4, Name = "", State = "Washington", County = "" },
-        new StatePark { StateParkId = 5, Name = "", State = "California", County = "" },
-        new StatePark { StateParkId = 6, Name = "", State = "California", County = "" }
+        new StatePark { StateParkId = 2, Name = "Cascadia_State_Park", State = "Oregon", County = "Linn" },
+        new StatePark { StateParkId = 3, Name = "Fort_Ebey_State_Park", State = "Washington", County = "Island" },
+        new StatePark { StateParkId = 4, Name = "Ginkgo_Petrified_Forest", State = "Washington", County = "Kittitas" },
+        new StatePark { StateParkId = 5, Name = "Emerald_Bay_State_Park", State = "California", County = "El_Dorado" },
+        new StatePark { StateParkId = 6, Name = "Grizzly_Creek_Redwoods", State = "California", County = "Humboldt" }
       );
     }
   }
