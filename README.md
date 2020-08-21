@@ -13,7 +13,7 @@
 
 ## Description
 
-__
+_This was a friday independent project where we built an API.  This API contains data about some National Parks and State Parks.  This API also features some implemented pagination so that API calls can return separate pages of data and the amount of objects per page can be specified._
 
 <br>
 
@@ -21,10 +21,46 @@ __
 
 
 Example Query: <br>
-`https://localhost:5000/api/parks/`
+* `http://localhost:5000/api/nationalparks/7` <-- would query the National Park entry with an id of 7.<br>
+The output would look like this:
+```
+    {
+        "nationalParkId": 7,
+        "name": "John_Day_Fossil_Beds",
+        "state": "Oregon",
+        "accessPrice": 0
+    }
+```
 
-`https://localhost:5000/api/parks/5`
+* `http://localhost:5000/api/stateparks/5` <-- would query the State Park entry with an id of 5.<br>
+The output would look like this:
+```
+    {
+        "stateParkId": 5,
+        "name": "Emerald_Bay_State_Park",
+        "state": "California",
+        "county": "El_Dorado"
+    }
+```
 
+* `http://localhost:5000/api/stateparks/stateparkpages?pageNumber=3&pageSize=2` <-- would query a page that displays the 3rd page of State Parks with a page size of 2 State Parks displayed per page.<br>
+The output would look like this:
+```
+[
+    {
+        "stateParkId": 5,
+        "name": "Emerald_Bay_State_Park",
+        "state": "California",
+        "county": "El_Dorado"
+    },
+    {
+        "stateParkId": 6,
+        "name": "Grizzly_Creek_Redwoods",
+        "state": "California",
+        "county": "Humboldt"
+    }
+]
+```
 
 <br>
 
@@ -51,7 +87,7 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
 * This can be found in the MySql Workbench `Server` menu as `Data Import`, then choose `Import from Self-Contained File`.  Use the browsing tool to select the `taylor_phillips.sql` file that is included with the project and finally select `Start Import`.
 
 [![MySql gif tutorial](https://i.gyazo.com/7344f0f1229a3da604673362176a43d4.gif)](https://gyazo.com/7344f0f1229a3da604673362176a43d4))
-* Within the project file, `appsettings.json` you will need to be sure that the password (pwd) matches the password that you are using for your MySql Workbench.
+* Within the project file, create a new `appsettings.json` you will need to be sure that the password (pwd) matches the password that you are using for your MySql Workbench.
 * Your appsettings.json file should follow this format: <br>
 
   ```{
@@ -64,7 +100,7 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
 
 #### Alternatively,
 * In your command line terminal, type `cd Desktop` then navigate to project folder using `cd AWalkInThePark.Solution`
-* Then navigate to `cd Parks` and type ``` dotnet ef migrations Initial ```
+* Then navigate to `cd WalkThePark` and type ``` dotnet ef migrations Initial ```
 * Then type ``` dotnet ef database update ```
 * You can confirm your the database has been created by going to the `Schemas` tab in your MySql Workbench and then right click and select `Refresh All` in the schema window.
 
@@ -72,8 +108,8 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
 
 ### Running the program:
 1. In your command line terminal, type `cd Desktop` then navigate to project folder using `cd AWalkInThePark.Solution`
-2. To run the program, you'll need navigate to the project folder by entering `cd Parks`, then to compile the code enter: `dotnet restore`. This will create a compiled application in the bin/ folder.  Do not touch the files in the bin/ or obj/ folders, you will not need to and the application will not run as intended.
-3. You can then run the program directly with `dotnet run` while still within the 'Parks' directory.
+2. To run the program, you'll need navigate to the project folder by entering `cd WalkThePark`, then to compile the code enter: `dotnet restore`. This will create a compiled application in the bin/ folder.  Do not touch the files in the bin/ or obj/ folders, you will not need to and the application will not run as intended.
+3. You can then run the program directly with `dotnet run` while still within the 'WalkThePark' directory.
 
 ### OpenAPI Documentation:
 For further documentation on our API, see our SwaggerUI here while server is running:
