@@ -12,14 +12,23 @@ namespace WalkThePark.Models
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-      builder.Entity<Park>()
+      builder.Entity<NationalPark>()
       .HasData(
-        new Park { ParkId = 1, Name = "Crater_Lake", State = "Oregon", ParkType = "National", AccessPrice = 30},
-        new Park { ParkId = 2, Name = "Oregon_Caves", State = "Oregon", ParkType = "National", AccessPrice = 10},
-        new Park { ParkId = 3, Name = "Fort_Vancouver", State = "Washington", ParkType = "National", AccessPrice = 10},
-        new Park { ParkId = 4, Name = "San_Juan", State = "Washington", ParkType = "National", AccessPrice = 0},
-        new Park { ParkId = 5, Name = "Point_Reyes", State = "California", ParkType = "National", AccessPrice = 0},
-        new Park { ParkId = 6, Name = "Golden_Gate", State = "California", ParkType = "National", AccessPrice = 0}
+        new NationalPark { NationalParkId = 1, Name = "Crater_Lake", State = "Oregon", AccessPrice = 30},
+        new NationalPark { NationalParkId = 2, Name = "Oregon_Caves", State = "Oregon", AccessPrice = 10},
+        new NationalPark { NationalParkId = 3, Name = "Fort_Vancouver", State = "Washington", AccessPrice = 10},
+        new NationalPark { NationalParkId = 4, Name = "San_Juan", State = "Washington", AccessPrice = 0},
+        new NationalPark { NationalParkId = 5, Name = "Point_Reyes", State = "California", AccessPrice = 0},
+        new NationalPark { NationalParkId = 6, Name = "Golden_Gate", State = "California", AccessPrice = 0}
+      );
+      builder.Entity<StatePark>()
+      .HasData(
+        new StatePark { StateParkId = 1, Name = "", State = "Oregon", County = ""},
+        new StatePark { StateParkId = 2, Name = "", State = "Oregon", County = "" },
+        new StatePark { StateParkId = 3, Name = "", State = "Washington", County = "" },
+        new StatePark { StateParkId = 4, Name = "", State = "Washington", County = "" },
+        new StatePark { StateParkId = 5, Name = "", State = "California", County = "" },
+        new StatePark { StateParkId = 6, Name = "", State = "California", County = "" }
       );
     }
   }
