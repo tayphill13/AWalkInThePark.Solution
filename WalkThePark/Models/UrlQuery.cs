@@ -8,13 +8,13 @@ namespace WalkThePark.Models
     public UrlQuery()
     {
       this.PageNumber = 1;
-      this.PageSize = 4;
+      this.PageSize = 10;
     }
 
     public UrlQuery(int pageNumber, int pageSize)
     {
       this.PageNumber = pageNumber < 1 ? 1 : pageNumber;
-      this.PageSize = pageSize > 4 ? 4 : pageSize;
+      this.PageSize = pageSize > 10 ? 10 : pageSize;
     }
   }
 }
