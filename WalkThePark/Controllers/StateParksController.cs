@@ -19,7 +19,7 @@ namespace WalkThePark.Controllers
     }
 
     // GET api/stateparks
-    [HttpGet("statepages")]
+    [HttpGet ("StateParkPages")]
     public async Task<IActionResult> GetAll([FromQuery] UrlQuery urlQuery)
     {
       var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
@@ -31,7 +31,7 @@ namespace WalkThePark.Controllers
     }
 
     // GET api/nationalparks/5
-    [HttpGet("statesearch")]
+    [HttpGet]
     public ActionResult<IEnumerable<StatePark>> Get(string name, string state, string county)
     {
       var query = _db.StateParks.AsQueryable();
