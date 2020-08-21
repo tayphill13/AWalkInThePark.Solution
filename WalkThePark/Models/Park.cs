@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Parks.Models
+namespace WalkThePark.Models
 {
   public class Park
   {

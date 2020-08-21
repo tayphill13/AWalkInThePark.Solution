@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Parks.Models;
+using WalkThePark.Models;
 
 
 namespace Parks
@@ -21,7 +21,7 @@ namespace Parks
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ParksContext>(opt =>
+            services.AddDbContext<WalkTheParkContext>(opt =>
                 opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

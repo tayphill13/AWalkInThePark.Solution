@@ -1,4 +1,4 @@
-namespace Parks.Models
+namespace WalkThePark.Models
 {
   public class UrlQuery
   {

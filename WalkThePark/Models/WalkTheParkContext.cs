@@ -1,14 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Parks.Models
+namespace WalkThePark.Models
 {
 
-  public class ParksContext : DbContext
+  public class WalkTheParkContext : DbContext
   {
 
-    public ParksContext(DbContextOptions<ParksContext>
-    options)
-    : base(options)
+    public WalkTheParkContext(DbContextOptions<WalkTheParkContext> options) : base(options)
     {
     }
 
