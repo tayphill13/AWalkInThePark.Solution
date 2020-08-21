@@ -2,13 +2,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Parks.Models
 {
-  public class NationalPark
+  public class Park
   {
-    public int NationalParkId { get; set; }
+    public int ParkId { get; set; }
     [Required]
     public string Name { get; set; }
     [Required]
-    public string Location { get; set; }
+    public string State { get; set; }
+    [Required]
+    public string ParkType { get; set; }
     [Required]
     public int AccessPrice { get; set; }
   }
