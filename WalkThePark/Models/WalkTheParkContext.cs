@@ -31,5 +31,7 @@ namespace WalkThePark.Models
         new StatePark { StateParkId = 6, Name = "Grizzly_Creek_Redwoods", State = "California", County = "Humboldt" }
       );
     }
+    public DbSet<NationalPark> NationalParks { get; set; }
+    public DbSet<StatePark> StateParks  { get; set; }
   }
 }

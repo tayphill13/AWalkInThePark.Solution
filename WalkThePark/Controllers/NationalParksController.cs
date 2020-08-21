@@ -48,7 +48,7 @@ namespace WalkThePark.Controllers
                 query = query.Where(entry => entry.AccessPrice == accessPrice);
             }
 
-            return Queryable.ToList();
+            return query.ToList();
         }
 
         // POST api/nationalparks

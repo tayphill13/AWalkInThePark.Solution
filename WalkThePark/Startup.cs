@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WalkThePark.Models;
 
 
-namespace Parks
+namespace WalkThePark
 {
     public class Startup
     {
