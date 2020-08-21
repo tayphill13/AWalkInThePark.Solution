@@ -16,7 +16,9 @@ namespace Parks.Models
     {
       builder.Entity<>()
       .HasData(
-        new Park { ParkId = 1, }
+        new NationalPark { NationalParkId = 1, Name = "Crater_Lake", Location = "Oregon", AccessPrice = 30},
+        new NationalPark { NationalParkId = 2, Name = "Oregon_Caves", Location = "Oregon", AccessPrice = 10},
+        
       )
     }
   }
