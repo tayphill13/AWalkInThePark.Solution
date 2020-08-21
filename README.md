@@ -18,9 +18,40 @@ _This was a friday independent project where we built an API.  This API contains
 <br>
 
 ## HTTP Request
+```
+For National Parks:
+
+Get /api/nationalparks
+Post /api/nationalparks
+Get /api/nationalparks/{id}
+Put /api/nationalparks/{id}
+Delete /api/nationalparks/{id}
+```
+```
+For State Parks:
+
+Get /api/stateparks
+Post /api/stateparks
+Get /api/stateparks/{id}
+Put /api/stateparks/{id}
+Delete /api/stateparks/{id}
+```
 
 ## Path Parameters
-
+<br>
+National Parks
+|Parameter | type | default | required | Description |
+| :-------- | ------  | ----- | ------ | ----------- |
+| Name  | String  | none    |  false   |  Return matches by name  |
+| State |  String | none  |  false | Return matches by state  |
+| Access Price  |  Int |  none  | false  | Return matches by access price |
+<br>
+State Parks
+|Parameter | type | default | required | Description |
+| :-------- | ------  | ----- | ------ | ----------- |
+| Name  |     |     |     |     |
+| State |
+| County  |   |     |     |
 
 ## Example Queries
 
@@ -117,15 +148,15 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
 2. To run the program, you'll need navigate to the project folder by entering `cd WalkThePark`, then to compile the code enter: `dotnet restore`. This will create a compiled application in the bin/ folder.  Do not touch the files in the bin/ or obj/ folders, you will not need to and the application will not run as intended.
 3. You can then run the program directly with `dotnet run` while still within the 'WalkThePark' directory.
 
-### OpenAPI Documentation:
+<!-- ### OpenAPI Documentation:
 For further documentation on our API, see our SwaggerUI here while server is running:
-<http://localhost:5000/swagger/index.html#/>
+<http://localhost:5000/swagger/index.html#/> -->
 
 <br>
 
 ## Known Bugs
 
-_No known bugs_
+_If user chooses to select by access price, they must enter the price in an exact whole number_
 
 <br>
 
