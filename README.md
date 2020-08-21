@@ -17,11 +17,17 @@ _This was a friday independent project where we built an API.  This API contains
 
 <br>
 
-## Specifications/Example Queries
+## HTTP Request
+
+## Path Parameters
 
 
-Example Query: <br>
-* `http://localhost:5000/api/nationalparks/7` <-- would query the National Park entry with an id of 7.<br>
+## Example Queries
+
+<br>
+* `https://localhost:5000/api/nationalparks?state=oregon&accessprice=0`
+
+* `https://localhost:5000/api/nationalparks/7` <-- would query the National Park entry with an id of 7.<br>
 The output would look like this:
 ```
     {
@@ -32,7 +38,7 @@ The output would look like this:
     }
 ```
 
-* `http://localhost:5000/api/stateparks/5` <-- would query the State Park entry with an id of 5.<br>
+* `https://localhost:5000/api/stateparks/5` <-- would query the State Park entry with an id of 5.<br>
 The output would look like this:
 ```
     {
@@ -43,7 +49,7 @@ The output would look like this:
     }
 ```
 
-* `http://localhost:5000/api/stateparks/stateparkpages?pageNumber=3&pageSize=2` <-- would query a page that displays the 3rd page of State Parks with a page size of 2 State Parks displayed per page.<br>
+* `https://localhost:5000/api/stateparks/stateparkpages?pageNumber=3&pageSize=2` <-- would query a page that displays the 3rd page of State Parks with a page size of 2 State Parks displayed per page.<br>
 The output would look like this:
 ```
 [
