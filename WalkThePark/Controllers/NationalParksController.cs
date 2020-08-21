@@ -31,7 +31,7 @@ namespace WalkThePark.Controllers
         }
     
         // GET api/nationalparks/
-        [HttpGet("{id}")]
+        [HttpGet("search")]
         public ActionResult<IEnumerable<NationalPark>> Get(string name, string state, int accessPrice)
         {
             var query = _db.NationalParks.AsQueryable();
