@@ -36,9 +36,27 @@ namespace WalkThePark.Controllers
 
         // GET api/parks/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<IEnumerable<Park>> Get(string name, string state, string parkType, int accessPrice)
         {
-            return "thisPark";
+            var query = _db.Parks.AsQueryable();
+            if (name != null)
+            {
+                query = query.Where(entry => entry.Name == name);
+            }
+            if (state != null)
+            {
+                query = query.Where(entry => entry.State == state);
+            }
+            if (parkType != null)
+            {
+                query = query.Where(entry => entry.ParkType == parkType);
+            }
+            if (accessPrice != null)
+            {
+                query = query.Where(entry => entry.AccessPrice == accessPrice);
+            }
+
+            return Queryable.ToList();
         }
 
         // POST api/parks
