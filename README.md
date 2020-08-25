@@ -61,9 +61,9 @@ State Parks<br>
 ## Example Queries
 
 <br>
-* `https://localhost:5000/api/nationalparks?state=oregon&accessprice=0`
+* `http://localhost:5000/api/nationalparks?state=oregon&accessprice=0`
 
-* `https://localhost:5000/api/nationalparks/7` <-- would query the National Park entry with an id of 7.<br>
+* `http://localhost:5000/api/nationalparks/7` <-- would query the National Park entry with an id of 7.<br>
 The output would look like this:
 ```
     {
@@ -74,7 +74,7 @@ The output would look like this:
     }
 ```
 
-* `https://localhost:5000/api/stateparks/5` <-- would query the State Park entry with an id of 5.<br>
+* `http://localhost:5000/api/stateparks/5` <-- would query the State Park entry with an id of 5.<br>
 The output would look like this:
 ```
     {
@@ -85,7 +85,7 @@ The output would look like this:
     }
 ```
 
-* `https://localhost:5000/api/stateparks/stateparkpages?pageNumber=3&pageSize=2` <-- would query a page that displays the 3rd page of State Parks with a page size of 2 State Parks displayed per page.<br>
+* `http://localhost:5000/api/stateparks/stateparkpages?pageNumber=3&pageSize=2` <-- would query a page that displays the 3rd page of State Parks with a page size of 2 State Parks displayed per page.<br>
 The output would look like this:
 ```
 [
@@ -116,7 +116,7 @@ The output would look like this:
 ## 💻 Setup
 <br>
 Copy this url to clone this project to your local system using computer's Command Line terminal: 
-```https://github.com/tayphill13/AWalkInThePark.Solution.git```
+```http://github.com/tayphill13/AWalkInThePark.Solution.git```
 
 If you wish to edit the code base: Open the project in your code editor; with Bash, this is done by navigating to the project directory `cd AWalkInThePark.Solution`, then `code .`
 
@@ -134,7 +134,7 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
 * Your appsettings.json file should follow this format: <br>
 
   ```{
-  }
+  {
     "ConnectionStrings": {
         "DefaultConnection": "Server=localhost;Port3306;database=databaseNameHere;uid=YourUserNameHere;pwd=YourPasswordHere;"
       }
