@@ -136,7 +136,7 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
   ```{
   {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port3306;database=databaseNameHere;uid=YourUserNameHere;pwd=YourPasswordHere;"
+        "DefaultConnection": "Server=localhost;Port=3306;database=databaseNameHere;uid=YourUserNameHere;pwd=YourPasswordHere;"
       }
   }
   ```
