@@ -20,7 +20,7 @@ namespace WalkThePark.Controllers
 
     // GET api/stateparks
     [HttpGet ("StateParkPages")]
-    public async Task<IActionResult> GetAll([FromQuery] UrlQuery urlQuery)
+    public ActionResult GetAll([FromQuery] UrlQuery urlQuery)
     {
       var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
       var pagedData = _db.StateParks

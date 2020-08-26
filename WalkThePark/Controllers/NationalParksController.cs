@@ -20,7 +20,7 @@ namespace WalkThePark.Controllers
 
         // GET api/nationalparks
         [HttpGet ("pages")]
-        public async Task<IActionResult> GetAll([FromQuery] UrlQuery urlQuery)
+        public ActionResult GetAll([FromQuery] UrlQuery urlQuery)
         {
             var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
             var pagedData = _db.NationalParks
@@ -43,7 +43,7 @@ namespace WalkThePark.Controllers
             {
                 query = query.Where(entry => entry.State == state);
             }
-            if (accessPrice != null)
+            if (accessPrice != 0)
             {
                 query = query.Where(entry => entry.AccessPrice == accessPrice);
             }
