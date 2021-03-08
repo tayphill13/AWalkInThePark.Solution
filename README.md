@@ -116,7 +116,7 @@ The output would look like this:
 ## 💻 Setup
 <br>
 Copy this url to clone this project to your local system using computer's Command Line terminal: 
-```http://github.com/tayphill13/AWalkInThePark.Solution.git```
+`http://github.com/tayphill13/AWalkInThePark.Solution.git`
 
 If you wish to edit the code base: Open the project in your code editor; with Bash, this is done by navigating to the project directory `cd AWalkInThePark.Solution`, then `code .`
 
